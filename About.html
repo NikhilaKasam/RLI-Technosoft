@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | RLI Technosoft</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      font-family:Arial, sans-serif;
+      background:whitesmoke;
+      padding-top:130px;
+    }
+
+    /* ================= NAVBAR ================= */
+    .navbar{
+      position:fixed;
+      top:0;
+      left:0;
+      width:100%;
+      height:120px;
+      background:#0a2e6f;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:0 20px;
+      z-index:10000;
+    }
+
+    .logo img{
+      height:100px;
+    }
+
+    /* MENU ICON */
+    .menu-toggle{
+      cursor:pointer;
+    }
+
+    .menu-toggle span{
+      display:block;
+      width:30px;
+      height:3px;
+      background:white;
+      margin:6px 0;
+    }
+
+    /* MENU */
+    .nav-menu{
+      position:absolute;
+      top:120px;
+      right:20px;
+      background:#0a2e6f;
+      list-style:none;
+      width:200px;
+      display:none;
+      border-radius:6px;
+      box-shadow:0 8px 20px rgba(0,0,0,0.4);
+    }
+
+    .nav-menu li a{
+      display:block;
+      padding:14px 20px;
+      color:white;
+      text-decoration:none;
+    }
+
+    .nav-menu li a:hover{
+      background:#143f9a;
+    }
+
+    @media(max-width:768px){
+      .nav-menu{
+        right:0;
+        width:100%;
+        border-radius:0;
+      }
+    }
+
+    /* ================= CONTENT ================= */
+    .about-container{
+      max-width:800px;
+      margin:20px auto;
+      padding:30px 20px;
+      background:white;
+      border-radius:8px;
+      box-shadow:0 4px 12px rgba(0,0,0,0.1);
+      line-height:1.7;
+      text-align:justify;
+    }
+
+    h2{
+      font-size:30px;
+      margin-bottom:20px;
+      color:#00bfff;
+      border-bottom:4px solid #00bfff;
+      display:inline-block;
+      font-style:oblique;
+    }
+
+    p{
+      font-style:oblique;
+      margin-top:15px;
+    }
+
+    /* 🔥 GAP FIX FOR SECTIONS */
+    .section-gap{
+      margin-top:30px;
+    }
+
+    /* ================= FOOTER ================= */
+    footer{
+      background:#0a2e6f;
+      color:white;
+      text-align:center;
+      padding:30px 20px;
+      margin-top:60px;
+    }
+
+    footer a{
+      color:#ffd700;
+      text-decoration:none;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="logo">
+    <img src="RLI Technosoft.jpg" alt="RLI Technosoft Logo">
+  </div>
+
+  <div class="menu-toggle" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <ul class="nav-menu" id="navMenu">
+    <li><a href="RLI Technosoft.html">Home</a></li>
+    <li><a href="About.html">About</a></li>
+    <li><a href="clinets.html">Clients</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="contact.html">Contact us</a></li>
+  </ul>
+</nav>
+
+<!-- ABOUT CONTENT -->
+<section class="about-container">
+
+  <h2>About Us</h2>
+
+  <p><strong>Company Overview</strong><br><br>
+    RLI Technosoft is a leading staffing and recruitment agency dedicated to connecting exceptional talent with outstanding organizations. Founded in 2025, we specialize in providing customized workforce solutions that empower businesses to achieve their goals while helping professionals advance their careers.
+  </p>
+
+  <p>
+    With a commitment to integrity, efficiency, and excellence, we serve as a trusted partner for both employers and job seekers across PAN India.
+  </p>
+
+  <h2 class="section-gap">Our Values & Mission</h2>
+
+  <p><strong>Our Values</strong><br>
+    Customer Focus: We prioritize the needs of our clients and candidates, ensuring personalized service and satisfaction.<br>
+    Quality: We are dedicated to delivering high-quality staffing solutions.<br>
+    Collaboration: We believe in teamwork and strong relationships.<br>
+    Innovation: We adapt to the evolving job market with new ideas.
+  </p>
+
+  <!-- ✅ GAP ADDED HERE -->
+  <p class="section-gap">
+    <strong>1. Vision Statement</strong><br>
+     To be the most trusted and innovative staffing partner, empowering organizations with exceptional talent and professionals with fulfilling career opportunities.
+  </p>
+
+  <p class="section-gap">
+    <strong>2. Mission Statement</strong><br>
+    To deliver high-quality staffing solutions through strategic sourcing, personalized service, and long-term partnerships that drive success for both our clients and candidates.
+
+  </p>
+
+  <p class="section-gap">
+    <strong>3. Core Values</strong><br>
+    Integrity: We act with honesty and transparency in every interaction.<br>
+    Excellence: We strive for the highest standards in recruitment and client service.<br>
+    Partnership: We build strong, long-term relationships based on mutual success.<br>
+    Innovation: We leverage technology and market insights to deliver efficient solutions.<br>
+    Diversity: We promote inclusion and equal opportunity in every hiring process.
+
+  </p>
+
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p style="font-size:18px; font-weight:bold;">© 2026 RLI Technosoft</p>
+  <p>KRCR Colony, Bachupally, Hyderabad, Telangana - 500090</p>
+  <p>Email: <a href="mailto:hr@rlitechnosoft.com">hr@rlitechnosoft.com</a></p>
+  <p>Contact: <a href="tel:9440962900">+91 9440962900</a></p>
+</footer>
+
+<script>
+  function toggleMenu(){
+    const m = document.getElementById("navMenu");
+    m.style.display = m.style.display === "block" ? "none" : "block";
+  }
+</script>
+
+</body>
+</html>
