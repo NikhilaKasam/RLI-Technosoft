@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Clients</title>
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:Arial, sans-serif;
+  background:whitesmoke;
+  padding-top:130px;
+  font-style: oblique;
+}
+
+/* ================= NAVBAR ================= */
+.navbar{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:120px;
+  background:#0a2e6f;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:0 20px;
+  z-index:10000;
+}
+
+.logo img{
+  height:100px;
+}
+
+/* MENU ICON */
+.menu-toggle{
+  cursor:pointer;
+}
+
+.menu-toggle span{
+  display:block;
+  width:30px;
+  height:3px;
+  background:white;
+  margin:6px 0;
+}
+
+/* MENU */
+.nav-menu{
+  position:absolute;
+  top:120px;
+  right:20px;
+  background:#0a2e6f;
+  list-style:none;
+  width:200px;
+  display:none;
+  border-radius:6px;
+  box-shadow:0 8px 20px rgba(0,0,0,0.4);
+}
+
+.nav-menu li a{
+  display:block;
+  padding:14px 20px;
+  color:white;
+  text-decoration:none;
+}
+
+.nav-menu li a:hover{
+  background:#143f9a;
+}
+
+/* MOBILE FULL WIDTH MENU */
+@media(max-width:768px){
+  .nav-menu{
+    right:0;
+    width:100%;
+    border-radius:0;
+  }
+}
+</style>
+</head>
+  <body>
+    <!-- NAVBAR -->
+<nav class="navbar">
+  <div class="logo">
+    <img src="RLI Technosoft.jpg">
+  </div>
+
+  <div class="menu-toggle" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+
+  <ul class="nav-menu" id="navMenu">
+    <li><a href="RLI Technosoft.html">Home</a></li>
+    <li><a href="About.html">About</a></li>
+    <li><a href="clinets.html">Clients</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="contact.html">Contact us</a></li>
+  </ul>
+</nav>
+<script>
+  /* MENU */
+function toggleMenu(){
+  const m=document.getElementById("navMenu");
+  m.style.display = m.style.display==="block" ? "none" : "block";
+}
+</script>
+<section id="clients">
+  <h1 style="text-align:center; margin-bottom:30px; color:#0a2e6f;">
+    Our Esteemed Clients
+  </h1>
+  
+</section>
+
+
+<div class="clients-wrapper">
+  <div class="clients-grid">
+    <img src="clinit.1.jpeg">
+    <img src="clinit.2.jpeg">
+    <img src="clinit.3.jpeg">
+    <img src="clinit.4.jpeg">
+    <img src="clinit.5.jpeg">
+    <img src="clinit.8.png">
+  </div>
+</div>
+
+<style>
+    .clients-wrapper {
+  width: 100%;
+  padding: 40px 60px;
+  background: #ffffff;
+  box-sizing: border-box;
+}
+
+.clients-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.clients-grid img {
+  width: 100%;
+  height: 120px;
+  object-fit: contain;
+  padding: 20px;
+  background: #fff;
+  border: 2px solid #ddd;
+  box-sizing: border-box;
+  transition: 0.3s;
+}
+
+.clients-grid img:hover {
+  border-color: #0a2e6f;
+}
+
+</style>
+<footer style="
+  background: #0a2e6f;
+  color: white;
+  text-align: center;
+  padding: 30px 20px;
+  margin-top: 60px;
+  font-family: Arial, sans-serif;
+">
+
+  <p style="font-size:18px; font-weight:bold;">
+    © 2026 RLI Technosoft
+  </p>
+
+  <p>
+    Address:  KRCR Colony, Bachupally, Hyderabad, Telangana - 500090
+  </p>
+
+  <p>
+    Email: <a href="mailto:hr@rlitechnosoft.com" style="color:#ffd700; text-decoration:none;">
+      hr@rlitechnosoft.com
+    </a>
+  </p>
+
+  <p>
+    Contact: <a href="tel:9440962900" style="color:#ffd700; text-decoration:none;">
+      +91 9440962900
+    </a>
+  </p>
+
+</footer>
+
+</body>
