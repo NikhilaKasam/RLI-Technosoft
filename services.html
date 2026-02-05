@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Services</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Services</title>
+
 <style>
 *{
   margin:0;
@@ -37,7 +38,6 @@ body{
   height:100px;
 }
 
-/* MENU ICON */
 .menu-toggle{
   cursor:pointer;
 }
@@ -50,7 +50,6 @@ body{
   margin:6px 0;
 }
 
-/* MENU */
 .nav-menu{
   position:absolute;
   top:120px;
@@ -74,7 +73,6 @@ body{
   background:#143f9a;
 }
 
-/* MOBILE FULL WIDTH MENU */
 @media(max-width:768px){
   .nav-menu{
     right:0;
@@ -83,7 +81,7 @@ body{
   }
 }
 
-/* ===== SERVICES SECTION ===== */
+/* ================= SERVICES ================= */
 #services{
   padding:60px 20px;
   background:whitesmoke;
@@ -92,7 +90,7 @@ body{
 
 #services h2{
   font-size:32px;
-  color:black;
+  color:#0a2e6f;
   margin-bottom:10px;
 }
 
@@ -102,42 +100,32 @@ body{
   color:black;
 }
 
-/* ===== SCROLL WRAPPER ===== */
+/* ===== CENTER + SCROLL FIX ===== */
 .services-wrapper{
   overflow:hidden;
   position:relative;
+  display:flex;
+  justify-content:center;
 }
 
 .services-track{
   display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:30px;
   width:max-content;
-  animation: step-endless 40s linear infinite;
-}
-
-.services-wrapper:hover .services-track{
-  animation-play-state: paused;
-}
-
-@keyframes scroll{
-  from{ transform:translateX(0); }
-  to{ transform:translateX(-50%); }
+  animation: scroll 40s linear infinite;
 }
 
 /* ===== SERVICE CARD ===== */
 .service-card{
   background:whitesmoke;
   width:260px;
-  margin:0 15px;
   border-radius:12px;
   box-shadow:0 6px 15px rgba(0,0,0,0.1);
   cursor:pointer;
   overflow:hidden;
-  animation: fadeIn 1.2s ease;
-}
-
-@keyframes fadeIn{
-  from{ opacity:0; transform:translateY(20px); }
-  to{ opacity:1; transform:translateY(0); }
+  text-align:center;
 }
 
 .service-card img{
@@ -164,49 +152,33 @@ body{
 .popup-box{
   background:#fff;
   max-width:250px;
-  max-height: fit-content;
   margin:5% auto;
   padding:25px;
   border-radius:12px;
   position:relative;
-  box-shadow:0 8px 20px rgba(0,0,0,0.3);
-  animation: fadeInPopup 0.5s ease;
-
 }
 
 .popup-box img{
   width:50%;
-  border-radius:10px;
   margin-bottom:15px;
-}
-
-.popup-box h3{
-  color:#0a2e6f;
-}
-
-.popup-box ul{
-  padding-left:18px;
 }
 
 .close{
   position:absolute;
-  top:50px;
+  top:10px;
   right:15px;
-  font-size:22px;
   cursor:pointer;
 }
 
-/* ===== MOBILE ===== */
+/* MOBILE */
 @media(max-width:600px){
-  .service-card{ width:220px; 
-  }
+  .service-card{ width:220px; }
 }
 </style>
 </head>
 
 <body>
 
-  <!-- NAVBAR -->
 <nav class="navbar">
   <div class="logo">
     <img src="RLI Technosoft.jpg">
@@ -224,157 +196,70 @@ body{
     <li><a href="contact.html">Contact us</a></li>
   </ul>
 </nav>
+
+<section id="services">
+  <h2>Our Services</h2>
+  <p>We deliver end-to-end IT & staffing solutions that empower businesses to grow.</p>
+
+  <div class="services-wrapper">
+    <div class="services-track">
+
+      <div class="service-card">
+        <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d">
+        <h3>Contract Staffing</h3>
+      </div>
+
+      <div class="service-card">
+        <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216">
+        <h3>Permanent Staffing</h3>
+      </div>
+
+      <div class="service-card">
+        <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0">
+        <h3>RPO Services</h3>
+      </div>
+
+      <div class="service-card">
+        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f">
+        <h3>Training & Development</h3>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- FOOTER -->
+<footer style="
+  background:#0a2e6f;
+  color:white;
+  text-align:center;
+  padding:30px 20px;
+  margin-top:60px;
+  font-family:Arial, sans-serif;
+">
+  <p style="font-size:18px; font-weight:bold;">
+    © 2026 RLI Technosoft
+  </p>
+
+  <p>
+    Address: KRCR Colony, Bachupally, Hyderabad, Telangana - 500090
+  </p>
+
+  <p>
+    Email:hr@rlitechnosoft.com<a href="mailto: hr@rlitechnosoft.com" style="color:#ffd700; text-decoration:none;">
+    </a>
+  </p>
+  <p>
+    Contact: <a href="tel:9848465666" style="color:#ffd700; text-decoration:none;">
+    +91 9440962900
+    </a>
+  </p>
+</footer>
 <script>
-  /* MENU */
 function toggleMenu(){
   const m=document.getElementById("navMenu");
   m.style.display = m.style.display==="block" ? "none" : "block";
 }
 </script>
 
-<!-- ===== SERVICES ===== -->
-<section id="services">
-  <h2 style="color:#0a2e6f; margin-bottom:10px;">
-  
-    Our Services
-  </h2 style="color:#0a2e6f; margin-bottom:10px;">
-  <p style="max-width:700px; margin:0 auto 40px; color:black; font: size 20px; font-family: Arial, sans-serif; ">
-    We deliver end-to-end IT & staffing solutions that empower businesses to grow.
-  </p>
-
-
-  <div class="services-wrapper" id="servicesWrapper">
-    <div class="services-track" id="servicesTrack">
-
-      <div class="service-card" onclick="openService('contract')">
-        <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d">
-        <h3>Contract Staffing</h3>
-      </div>
-
-      <div class="service-card" onclick="openService('permanent')">
-        <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216">
-        <h3>Permanent Staffing</h3>
-      </div>
-
-      <div class="service-card" onclick="openService('rpo')">
-        <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0">
-        <h3>RPO Services</h3>
-      </div>
-
-      <div class="service-card" onclick="openService('training')">
-        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f">
-        <h3>Training & Development</h3>
-      </div>
-
-
-    </div>
-  </div>
-</section>
-
-<!-- ===== POPUP ===== -->
-<div id="popup">
-  <div class="popup-box">
-    <span class="close" onclick="closeService()">✖</span>
-    <img id="popupImg">
-    <h3 id="popupTitle"></h3>
-    <p id="popupDesc"></p>
-    <ul id="popupList"></ul>
-  </div>
-</div>
-
-<script>
-const data={
-contract:{
- title:"Contract Staffing",
- img:"https://images.unsplash.com/photo-1521737604893-d14cc237f11d",
- desc:"Flexible workforce solutions for short and long-term projects.",
- list:["IT Contract Staffing","Project-Based Hiring","Remote & Onsite"]
-},
-permanent:{
- title:"Permanent Staffing",
- img:"https://images.unsplash.com/photo-1521791136064-7986c2920216",
- desc:"End-to-end permanent recruitment services.",
- list:["Executive Hiring","IT & Non-IT Roles","Industry Experts"]
-},
-rpo:{
- title:"RPO Services",
- img:"https://images.unsplash.com/photo-1557804506-669a67965ba0",
- desc:"Complete recruitment process outsourcing.",
- list:["Bulk Hiring","Recruiter On Demand","Talent Pipeline"]
-},
-training:{
- title:"Training & Development",
- img:"https://images.unsplash.com/photo-1522202176988-66273c2fd55f",
- desc:"Professional & corporate training programs.",
- list:["Corporate Training","Freshers Training","Soft Skills"]
-}
-};
-
-function openService(k){
- popup.style.display="block";
- popupImg.src=data[k].img;
- popupTitle.innerText=data[k].title;
- popupDesc.innerText=data[k].desc;
- popupList.innerHTML="";
- data[k].list.forEach(i=>{
-  let li=document.createElement("li");
-  li.innerText=i;
-  popupList.appendChild(li);
- });
-}
-
-function closeService(){
- popup.style.display="none";
-}
-
-/* MOBILE SWIPE */
-let startX=0,scrollLeft=0;
-const wrap=document.getElementById("servicesWrapper");
-wrap.addEventListener("touchstart",e=>{
- startX=e.touches[0].pageX;
- scrollLeft=wrap.scrollLeft;
-});
-wrap.addEventListener("touchmove",e=>{
- const x=e.touches[0].pageX;
- const walk=(startX-x)*2;
- wrap.scrollLeft=scrollLeft+walk;
-});
-</script>
-
-
-
-<footer style="
-  background: #0a2e6f;
-  color: white;
-  text-align: center;
-  padding: 30px 20px;
-  margin-top: 60px;
-  font-family: Arial, sans-serif;
-">
-
-  <p style="font-size:18px; font-weight:bold;">
-    © 2026 RLI Technosoft
-  </p>
-
-  <p>
-    Address:  KRCR Colony, Bachupally, Hyderabad, Telangana - 500090
-  </p>
-
-  <p>
-    Email: <a href="mailto:hr@rlitechnosoft.com" style="color:#ffd700; text-decoration:none;">
-      hr@rlitechnosoft.com
-    </a>
-  </p>
-
-  <p>
-    Contact: <a href="tel:9440962900" style="color:#ffd700; text-decoration:none;">
-      +91 9440962900
-    </a>
-  </p>
-
-</footer>
-
 </body>
 </html>
-
-
