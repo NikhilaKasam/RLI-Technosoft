@@ -258,6 +258,12 @@ body{
     <img src="images/client3.jpeg" alt="Client 3">
     <img src="images/client4.jpeg" alt="Client 4">
     <img src="images/client5.jpeg" alt="Client 5">
+    <!-- DUPLICATE (FOR INFINITE LOOP) -->
+    <img src="images/client1.jpeg" alt="Client 1">
+    <img src="images/client2.jpeg" alt="Client 2">
+    <img src="images/client3.jpeg" alt="Client 3">
+    <img src="images/client4.jpeg" alt="Client 4">
+    <img src="images/client5.jpeg" alt="Client 5">
   </div>
 </div>
 
@@ -304,6 +310,23 @@ body{
   <h2>Our Services</h2>
   <div class="services-wrapper">
     <div class="services-track">
+      <div class="service-card" onclick="openService('Contract Staffing')">
+        <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d">
+        <h3>Contract Staffing</h3>
+      </div>
+      <div class="service-card" onclick="openService('Permanent Staffing')">
+        <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216">
+        <h3>Permanent Staffing</h3>
+      </div>
+      <div class="service-card" onclick="openService('RPO Services')">
+        <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0">
+        <h3>RPO Services</h3>
+      </div>
+      <div class="service-card" onclick="openService('training')">
+        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f">
+        <h3>Training & Development</h3>
+      </div>
+<!-- DUPLICATE (FOR INFINITE LOOP) -->
       <div class="service-card" onclick="openService('Contract Staffing')">
         <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d">
         <h3>Contract Staffing</h3>
@@ -390,6 +413,7 @@ function closeService(){
 
 </body>
 </html>
+
 
 
 
